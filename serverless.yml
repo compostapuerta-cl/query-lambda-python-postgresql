@@ -1,0 +1,13 @@
+service: articulo
+
+provider:
+  name: aws
+  runtime: python2.7
+
+functions:
+  articulo:
+    handler: handler.articulo
+    events:
+      - http:
+          path: articulo
+          method: get
